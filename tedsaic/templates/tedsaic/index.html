@@ -25,9 +25,11 @@
 
 <div class="container">
     Hi.  Welcome to Tedsaic you lucky fool!
+    <div class="row">
     {% for image in images %}
-    <img src="{{image.url}}" height="100px" />
+    <img class="col" src="{{image.url}}" height="100px" />
     {% endfor %}
+    </div>
     <form action="{% url 'addImage' %}" method="post">
         {% csrf_token %}
         <label for="imageName">Enter the URL of an image:</label>
